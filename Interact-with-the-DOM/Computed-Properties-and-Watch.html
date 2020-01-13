@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VueJS</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>
+            <b>Known options for vue instance</b><br>
+            el: Connect to DOM <br>
+            data: Store data to be used <br>
+            methods: Methods of this vue instance <br>
+            computed: Dependent properties <br>
+            watch: Execute code upon data changes <br>
+        </p>
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Second Increase</button>
+        <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+        <p>Result: {{ result() }} | {{ output }}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                secondCounter: 0
+            },
+            //just like property in data object
+            //used if don't want to re execute any entire mehod
+            //get called if any property from data is used inside
+            computed: {
+                output: function () {
+                    return this.counter > 5 ? 'Greater 5' : 'Smaller 5';
+                }
+            },
+            watch: {
+                counter: function (value) {
+                    var vm = this;
+                    setTimeout(function () {
+                        vm.counter = 0;
+                    }, 2000);
+                }
+            },
+            methods: {
+                result: function () {
+                    return this.counter > 5 ? 'Greater 5' : 'Smaller 5';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

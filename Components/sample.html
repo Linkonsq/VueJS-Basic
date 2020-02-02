@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VueJS</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app1">
+        <my-cmp></my-cmp>
+        <hr>
+        <my-cmp></my-cmp>
+    </div>
+
+    <div id="app2">
+        <my-cmp></my-cmp>
+        <hr>
+        <my-cmp></my-cmp>
+    </div>
+
+    <script>
+        // Vue.component('my-cmp', {}) // register component globally
+        // register component locally
+        var cmp = {
+            data: function () {
+                return {
+                    status: 'critical'
+                }
+            },
+            template: '<p>Server status: {{ status }} (<button @click="changeStatus">Change</button>)</p>',
+            methods: {
+                changeStatus: function () {
+                    this.status = 'Normal'
+                }
+            }
+        };
+
+        new Vue({
+            el: '#app1',
+            components: {
+                'my-cmp': cmp
+            }
+        });
+
+        new Vue({
+            el: '#app2',
+        });
+    </script>
+</body>
+
+</html>

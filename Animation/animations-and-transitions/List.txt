@@ -1,0 +1,16 @@
+2. Understanding Transitions
+5. Assigning CSS Classes for Transitions
+6. Creating a Fade Transition with the CSS Transition Property
+7. Creating a Slide Transition with the CSS Animation Property
+8. Mixing Transition and Animation Properties
+10. Setting Up an Initial (on-load) Animation
+11. Using Different CSS Class Names
+12. Using Dynamic Names and Attributes
+13. Transitioning between Multiple Elements (Theory)
+15. Listening to Transition Event Hooks
+16. Understanding JavaScript Animations
+17. Excluding CSS from your Animation
+18. Creating an Animation in JavaScript
+19. Animating Dynamic Components
+20. Animating Lists with transition-group
+22. Using transition-group to Animate a List

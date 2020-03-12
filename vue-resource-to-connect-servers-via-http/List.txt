@@ -1,0 +1,7 @@
+4. Creating an Application and Setting Up a Server (Firebase)
+5. POSTing Data to a Server (Sending a POST Request)
+6. GETting and Transforming Data (Sending a GET Request)
+7. Configuring vue-resource Globally
+8. Intercepting Requests
+9. Intercepting Responses(skipped)
+11. Creating Custom Resources
